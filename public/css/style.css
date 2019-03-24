@@ -1,0 +1,373 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/metal.jpg');
+    background-size: cover;
+
+}
+
+#logo-container {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    margin-top: 40px;
+    width: 600px;
+    height: auto;
+}
+
+#battlefield {
+    width: 100%;
+    /* margin-top: 100px; */
+}
+
+.field {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.start {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* flex-direction: column; */
+    background-color: #232C34;
+    border-radius: 50px;
+    width: 30%;
+    height: auto;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+}
+
+.startNone {
+    display: none;
+}
+
+/* //////////////////////////////////////////////////////////// */
+
+span {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: 2px solid black;
+
+}
+
+span img {
+    width: 30px;
+    height: 40px;
+}
+
+td {
+    border: 1px solid white;
+    height: 42px;
+    width: 48px;
+}
+
+.front-button {
+    margin: 10px 0;
+}
+
+.rojo {
+    background-color: red;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+    animation: opacity 1s linear infinite;
+}
+
+
+
+.red {
+    background-color: red;
+    animation: opacity 1s linear infinite;
+}
+
+.actionMenu {
+    background-image: url('../img/panel.jpg');
+    position: absolute;
+    width: 235px;
+    height: 100%;
+    top: 0;
+}
+
+.player-menu {
+    background-image: url('../img/panel.jpg');
+    width: 235px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.actionMenuX {
+
+    position: absolute;
+    width: 235px;
+    height: 100%;
+    top: 0;
+}
+
+.player-menuX {
+    width: 235px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.buttonDisplay {
+    border: 1px solid black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 200px;
+    height: 80px;
+    top: 50%;
+    left: 0%;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+}
+
+.atakDisplay {
+    border: 1px solid black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 200px;
+    height: 80px;
+    top: 40%;
+    left: 0%;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+}
+
+.moveDisplay {
+    border: 1px solid black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 200px;
+    height: 80px;
+    top: 30%;
+    left: 0%;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+}
+.showDisplay {
+    border: 1px solid black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 200px;
+    height: 80px;
+    top: 20%;
+    left: 0%;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+}
+
+.button h1 {
+    display: none;
+}
+
+.atak h1 {
+    display: none;
+}
+
+.move h1 {
+    display: none;
+}
+
+.capitalRed {
+    background-image: url(../img/redFlag.jpg);
+    background-size: cover;
+}
+
+.capitalGreen {
+    background-image: url(../img/greenFlag.jpg);
+    background-size: cover;
+}
+
+
+.hand {
+    cursor: -ms-grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+#dialogoverlay {
+    display: none;
+    opacity: .8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    width: 100%;
+    z-index: 10;
+}
+
+#dialogbox {
+    display: none;
+    position: fixed;
+    background: #000;
+    border-radius: 7px;
+    width: 550px;
+    z-index: 10;
+}
+
+#dialogbox>div {
+    background: #FFF;
+    margin: 8px;
+}
+
+#dialogbox>div>#dialogboxhead {
+    background: #666;
+    font-size: 19px;
+    padding: 10px;
+    color: #CCC;
+}
+
+#dialogbox>div>#dialogboxbody {
+    background: #333;
+    padding: 20px;
+    color: #FFF;
+}
+
+#dialogbox>div>#dialogboxfoot {
+    background: #666;
+    padding: 10px;
+    text-align: right;
+}
+
+.stay {
+    background: transparent;
+}
+
+.explosion {
+    background: url("../img/explosion.png");
+    animation: explosion 1s steps(9);
+}
+
+@keyframes explosion {
+    0% {
+        background-position-x: -30px;
+        background-position-y: -22px;
+    }
+
+    100% {
+        background-position-x: -900px;
+        background-position-y: -900px;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+.rotation{
+    animation: giro 2s linear infinite;
+}
+
+
+
+@keyframes giro {
+    0% {
+        color: gold;
+    }
+
+    50% {
+        color: black;
+    }
+
+    100% {
+        color: gold;
+    }
+}
+
+.none-clase{
+    display: none;
+}
+
+.golden{
+    border: 2px solid rgba(241,231,103,1);
+}
+
+.mostrarTabla{
+    display: flex;
+    justify-content: center;
+    font-family: 'VT323', monospace;
+    font-size: 65px;
+ 
+}
+
+.insertPlayer{
+    font-family: 'VT323', monospace;
+    font-size: 35px;
+}
+.colorRojo{
+    color: red;
+}
+.colorAzul{
+    color: blue;
+}
+
+.reload-button{
+    background-color: #232C34;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+}
+
+.player_team_confirmation{
+    font-family: 'VT323', monospace;
+    background-color: #232C34;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}

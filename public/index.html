@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tank Battle Ground</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="dialogoverlay"></div>
+  <div id="dialogbox">
+    <div>
+      <div id="dialogboxhead"></div>
+      <div id="dialogboxbody"></div>
+      <div id="dialogboxfoot"></div>
+    </div>
+  </div>
+
+
+  <div id="logo-container">
+    <img src="./img/logo.png" class="logo" id="logo">
+  </div>
+
+  <div class="start" id="overStart" >
+    <h1 onclick="insert()"  id="start">Start</h1> <br>
+  </div>
+  <center>
+  <form action="/" class="insertPlayer" id="insertPlayer">
+    Name:<br>
+    <input type="text" name="name" id="name">
+    <br>
+    Your Team:<br>
+    <input type="checkbox" name="vehicle" id="checkRedTeam" onclick="checkRed()">Red Team<br>
+    <input type="checkbox" name="vehicle" id="checkBlueTeam" onclick="checkBlue()">Blue Team<br>
+    <br>
+  </form> 
+</center>
+
+
+
+
+  <div id="battlefield">
+    <table class="field" id="field"></table>
+  </div>
+  <!-- hacer que se desplieguen como una caja de informacion todos los botones -->
+  <div class="actionMenuX" id="actionMenu">
+
+    <div class="none-clase rojo front-button" id="button" onmouseover="display1()" onmouseout="displayNone1()">
+      <h1 onclick="changeTurn()">Next Turn</h1>
+    </div>
+
+    <div class="none-clase rojo front-button" id="atak" onmouseover="display2()" onmouseout="displayNone2()">
+      <h1 onclick="atakFunction()">Attack</h1>
+    </div>
+
+    <div class="none-clase rojo front-button" id="move" onmouseover="display3()" onmouseout="displayNone3()">
+      <h1 onclick="moveFunction()">Move</h1>
+    </div>
+
+    <div class="none-clase rojo front-button" id="show" onmouseover="display4()" onmouseout="displayNone4()">
+      <h1 onclick="show()">Chow records</h1>
+    </div>
+    <div class="none-clase rojo front-button" id="ocultar" onmouseover="display5()" onmouseout="displayNone5()">
+      <h1 onclick="ocultar()">Return</h1>
+    </div>
+
+  </div>
+
+  <div id="player-menu" class="player-menuX">
+      <h1 id="player_team_confirmation" class="player_team_confirmation none-clase"></h1>
+    <button onclick="start()" class="reload-button none-clase" id="reload-button"  onmouseover="display6()" onmouseout="displayNone6()">Reload</button>
+  
+  </div>
+
+  <div class="none-clase" id="scoreTable">
+    <ol>
+      <li id="0">Test</li>
+      <li id="1">Test</li>
+      <li id="2">Test</li>
+      <li id="3">Test</li>
+      <li id="4">Test</li>
+      <li id="5">Test</li>
+      <li id="6">Test</li>
+      <li id="7">Test</li>
+      <li id="8">Test</li>
+      <li id="9">Test</li>
+
+    </ol>
+  </div>
+
+
+
+
+  <script src="js/main.js"></script>
+ 
+
+</body>
+
+</html>
