@@ -4,8 +4,8 @@ var socket = require('socket.io');
 //app setup
 
 var app = express();
-var server = app.listen(7000, function(){
-    console.log("listening on port 7000")
+var server = app.listen(8095, function(){
+    console.log("listening on port 8095")
 });
 
 //static files

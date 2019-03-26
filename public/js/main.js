@@ -1,5 +1,5 @@
 //make conection
-var socket = io.connect('http://localhost:7000')
+var socket = io.connect('http://raranda.techlaunch.online:7000')
 
 // variables globales
 var field = "";
@@ -841,7 +841,7 @@ function VDcheck() {
             return response.json();
         })
         .then(function (myJson) {
-            console.log(JSON.stringify(myJson));
+            
             for (var v = 0; v < myJson.length; v++) {
                 if (name == myJson[v].name) {
                     victories = myJson[v].victories;
@@ -941,7 +941,6 @@ function insert() {
                 return response.json();
             })
             .then(function (myJson) {
-                console.log(JSON.stringify(myJson));
 
                 for (var g = 0; g < myJson.length; g++) {
                     if (name == myJson[g].name) {
@@ -997,7 +996,7 @@ function show() {
             return response.json();
         })
         .then(function (myJson) {
-            console.log(JSON.stringify(myJson));
+
             var top = [];
             var top10;
             for (var i = 0; i < myJson.length; i++) {
