@@ -1,5 +1,5 @@
 //make conection
-var socket = io.connect('http://raranda.techlaunch.online:7000')
+var socket = io.connect('http://raranda.techlaunch.online:8095')
 
 // variables globales
 var field = "";
@@ -841,7 +841,7 @@ function VDcheck() {
             return response.json();
         })
         .then(function (myJson) {
-            
+
             for (var v = 0; v < myJson.length; v++) {
                 if (name == myJson[v].name) {
                     victories = myJson[v].victories;

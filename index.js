@@ -47,7 +47,7 @@ const bodyparser = require('body-parser');
 app.use(bodyparser.json());
 
 var mysqlConnection = mysql.createConnection({
-    host:'localhost',
+    host:'http://raranda.techlaunch.online:7000',
     user: 'root',
     password: '',
     database: "tank",
